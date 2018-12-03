@@ -24,9 +24,15 @@ For try Othello Game you can click on [this link !](https://www.google.com)
 
 ## Play Offline
 
-- The first way is to install the game, for this, the only thing you have to do is to download the `Othello.exe` and  run it.
+### Mac OS
+For playing on MacOS is to download the folder `Othello For Mac` and  run the build inside.
 
-- The second way is to clone the project and launch it with Unity.
+### Windows
+For playing on MacOS is to download the folder `Othello For Windows` and  run the build inside.
+
+### Build the project
+If you want to custom the project you need to download the entire project.
+
 
 Enter this command in your terminal
 ```
