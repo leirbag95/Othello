@@ -20,7 +20,7 @@ The game is started in the position shown below on a reversi board consisting of
 
 ## Play Online
 
-For try Othello Game you can click on [this link !](https://www.google.com)
+For try Othello Game you can click on [this link !](https://othello-esilv.firebaseapp.com)
 
 ## Play Offline
 
