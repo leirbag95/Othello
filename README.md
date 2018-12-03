@@ -25,10 +25,10 @@ For try Othello Game you can click on [this link !](https://www.google.com)
 ## Play Offline
 
 ### Mac OS
-For playing on MacOS is to download the folder `Othello For Mac` and  run the build inside.
+For playing on MacOS is to download the build `Othello For Mac` and  run it.
 
 ### Windows
-For playing on MacOS is to download the folder `Othello For Windows` and  run the build inside.
+For playing on MacOS is to download the .exe `Othello For Windows` and  run it.
 
 ### Build the project
 If you want to custom the project you need to download the entire project.
