@@ -51,6 +51,8 @@ public class GamePlayMedium: MonoBehaviour
         board[4, 3] = 1;
 
 
+        GetAllPossibilities(0);
+
         /*
          * Setup IA
         */
@@ -108,6 +110,32 @@ public class GamePlayMedium: MonoBehaviour
 
     //MARK : private & public func
 
+
+    private void GetAllPossibilities(int pawn)
+    {
+        /* GET ALL POSSIBILITIES AND DISPLAY IT ON THE BOARD */
+
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                int index = i * 8 + j;
+
+                if (arrayPawn[index].image.color == Color.grey)
+                {
+                    arrayPawn[index].image.color = Color.clear;
+                }
+                if (round == 0) pawn = 1;
+                else pawn = 0;
+                if (canPutPawn(j, i, pawn) && board[j, i] == -1 && roundBoardUpdate(round, j, i, true))
+                {
+                    arrayPawn[index].image.sprite = knob;
+                    arrayPawn[index].image.color = Color.grey;
+                }
+            }
+        }
+    }
+
     public void recShowPawn(int x, int y)
     {
         /*If the place is available */
@@ -145,6 +173,8 @@ public class GamePlayMedium: MonoBehaviour
                 boardUpdate();
                 int pScore = Math.Abs(pawnNumber - getIAScore());
                 scorePlayer.text = pScore.ToString();
+
+                GetAllPossibilities(pawn);
 
                 if (isGameEnding() || !isRoundChange(round))
                 {

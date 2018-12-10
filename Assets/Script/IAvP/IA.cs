@@ -18,15 +18,17 @@ public class IA
         {-1,-1,-1,-1,-1,-1,-1,-1}};
 
     public List<int> aStarList = new List<int>();
-    List<int> listOfPossibilities = new List<int>();
+    public List<int> listOfPossibilities = new List<int>();
 
 
     //MARK: RANDOM AI
 
-    public int GetAllPossibilities(int[,] board)
+    public int GetAllPossibilities(int[,] board, bool forMinMax = false)
     {
         listOfPossibilities = new List<int>();
-        aStarList = new List<int>();
+        if (!forMinMax) {
+            aStarList = new List<int>();
+        }
 
         for (int i = 0; i < 8; i++)
         {
@@ -42,11 +44,7 @@ public class IA
             }
         }
 
-        int count = listOfPossibilities.Count;
-        /*We sleep the program for slow down the IA and leave time to player to think*/
-
-
-        Debug.Log("COUNT: " + count);
+        int count = listOfPossibilities.Count; 
         if (count > 0)
         {
             int rand = UnityEngine.Random.Range(0, listOfPossibilities.Count - 1);

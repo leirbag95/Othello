@@ -17,8 +17,16 @@ public class GamePlay : MonoBehaviour
     public Text WinnerText;
     public Button[] arrayPawn;
 
-    //MARK:
-    private int pawnNumber = 4;
+    //MARK:private
+    private int pawnNumber = 4; //Number of pawn
+    /*White Pawn Begin*/
+    private int round = 0;
+
+    //MARK: README
+    /*
+     * round 0 -> White Pawn
+     * round 1 -> Black Pawn
+    */
 
     public int[,] board = new int[8, 8]
        {{-1,-1,-1,-1,-1,-1,-1,-1},
@@ -29,42 +37,52 @@ public class GamePlay : MonoBehaviour
         {-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1}};
-
-    //MARK: private var
-    private int round = 0;
+        
 
     // Use this for initialization
     void Start()
     {
+        /*INITIALISE FUNCTION*/
         /*Start Settings*/
         board[3, 3] = 0;
         board[4, 4] = 0;
         board[3, 4] = 1;
         board[4, 3] = 1;
 
+        GetAllPossibilities(0);
 
+        /*
+         * Display the score of White Pawn
+        */
         scoreIA.text = getIAScore().ToString();
         int pScore = Math.Abs(pawnNumber - getIAScore());
+        /*
+         * Display the score of Black Pawn
+        */
         scorePlayer.text = pScore.ToString();
 
-
+        /*
+         * Show pawn on the board compared to board array 
+        */
         boardUpdate();
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    /*
+     * When user wants to place a pawn this function is call.
+    */
     public void showPawn(Button button)
     {
+        /*PUT PAWN ON THE BOARD*/
+
+
+        /*The index is get from the name of UIButton */
         int index = Int32.Parse(button.name.ToString());
 
+        /* The positions is get from index */
         int y = index / 8;
         int x = index % 8;
 
+        /*If the place is available */
         if (board[x, y] == -1)
         {
             int pawn;
@@ -93,12 +111,15 @@ public class GamePlay : MonoBehaviour
                     {
                         roundSprite.color = Color.black;
                     }
-
                 }
                 scoreIA.text = getIAScore().ToString();
+
                 boardUpdate();
+
                 int pScore = Math.Abs(pawnNumber - getIAScore());
                 scorePlayer.text = pScore.ToString();
+
+                GetAllPossibilities(pawn);
 
                 if (isGameEnding() || !isRoundChange(round))
                 {
@@ -125,24 +146,33 @@ public class GamePlay : MonoBehaviour
 
     //MARK : private func
 
-
-    private int getIAScore()
+    public void GetAllPossibilities(int pawn)
     {
-        int iaScore = 0;
+        /* GET ALL POSSIBILITIES AND DISPLAY IT ON THE BOARD */
+
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
-                if (board[j, i] == 0)
+                int index = i * 8 + j;
+
+                if (arrayPawn[index].image.color == Color.grey)
                 {
-                    iaScore++;
+                    arrayPawn[index].image.color = Color.clear;
+                }
+                if (round == 0) pawn = 1;
+                else pawn = 0;
+                if (canPutPawn(j, i, pawn) && board[j, i] == -1 && roundBoardUpdate(round, j, i, true))
+                {
+                    arrayPawn[index].image.sprite = knob;
+                    arrayPawn[index].image.color = Color.grey;
                 }
             }
         }
-        return iaScore;
     }
 
-    private bool canPutPawn(int x, int y, int pawn)
+
+    public bool canPutPawn(int x, int y, int pawn)
     {
         if (x == 0)
         {
@@ -201,10 +231,15 @@ public class GamePlay : MonoBehaviour
             || board[x - 1, y + 1] == pawn;
     }
 
-    private bool roundBoardUpdate(int r, int x, int y, bool isForChecking = false)
+    /*
+     * Update the board after playing.
+     * Also Use for a second checking.
+    */
+    public bool roundBoardUpdate(int r, int x, int y, bool isForChecking = false)
     {
 
         int[,] boardTmp = new int[8, 8];
+        /*Init of boardTmp*/
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
@@ -343,19 +378,22 @@ public class GamePlay : MonoBehaviour
         return false;
     }
 
-    private void displayboard(int[,] b)
+    private int getIAScore()
     {
-        string tmp = "";
+        int iaScore = 0;
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
-                tmp += b[j, i] + " ";
+                if (board[j, i] == 0)
+                {
+                    iaScore++;
+                }
             }
-            tmp += "\n";
         }
-        Debug.Log(tmp);
+        return iaScore;
     }
+
 
     private bool isGameEnding()
     {
@@ -404,15 +442,13 @@ public class GamePlay : MonoBehaviour
         {
             for (int j = 0; j < 8; j++)
             {
+                int index = i * 8 + j;
                 if (board[j, i] == 0)
                 {
-                    int index = i * 8 + j;
                     arrayPawn[index].image.sprite = knob;
                     arrayPawn[index].image.color = Color.white;
-                }
-                if (board[j,i] == 1)
+                } else if (board[j,i] == 1)
                 {
-                    int index = i * 8 + j;
                     arrayPawn[index].image.sprite = knob;
                     arrayPawn[index].image.color = Color.black;
                 }
