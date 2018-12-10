@@ -164,7 +164,7 @@
     </member>
     <member name="T:UnityEngine.Experimental.UIElements.Button.ButtonUxmlTraits">
       <summary>
-        <para>UxmlTraits for the Button.</para>
+        <para>UxmlTraits for the UI.Button.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.Experimental.UIElements.Button.ButtonUxmlTraits.#ctor">
@@ -3788,6 +3788,11 @@
         <para>Constructor.</para>
       </summary>
     </member>
+    <member name="T:UnityEngine.Experimental.UIElements.UxmlAttributeDescription.Use">
+      <summary>
+        <para>An enum to describe attribute use.</para>
+      </summary>
+    </member>
     <member name="F:UnityEngine.Experimental.UIElements.UxmlAttributeDescription.Use.None">
       <summary>
         <para>There is no restriction on the use of this attribute with the element.</para>
@@ -4243,7 +4248,7 @@
     </member>
     <member name="P:UnityEngine.Experimental.UIElements.UxmlTraits.canHaveAnyAttribute">
       <summary>
-        <para>Must return true if the UXML element attributes are not restricted to the values enumerated by uxmlAttributesDescription.</para>
+        <para>Must return true if the UXML element attributes are not restricted to the values enumerated by UxmlTraits.uxmlAttributesDescription.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Experimental.UIElements.UxmlTraits.uxmlAttributesDescription">
@@ -4769,7 +4774,7 @@
     </member>
     <member name="M:UnityEngine.Experimental.UIElements.VisualElement.SetEnabled(System.Boolean)">
       <summary>
-        <para>Changes the VisualElement enabled state. A disabled VisualElement does not receive most events.</para>
+        <para>Changes whether the current VisualElement is enabled or not. When disabled, a VisualElement does not receive most events.</para>
       </summary>
       <param name="value">New enabled state</param>
     </member>

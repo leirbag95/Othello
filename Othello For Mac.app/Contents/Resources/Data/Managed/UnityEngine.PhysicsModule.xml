@@ -36,7 +36,7 @@
     </member>
     <member name="P:UnityEngine.CapsuleCollider.height">
       <summary>
-        <para>The height of the capsule meased in the object's local space.</para>
+        <para>The height of the capsule measured in the object's local space.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.CapsuleCollider.radius">
@@ -189,7 +189,7 @@
     </member>
     <member name="P:UnityEngine.Collider.bounds">
       <summary>
-        <para>The world space bounding volume of the collider.</para>
+        <para>The world space bounding volume of the collider (Read Only).</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Collider.contactOffset">
@@ -237,10 +237,10 @@
         <para>Casts a Ray that ignores all Colliders except this one.</para>
       </summary>
       <param name="ray">The starting point and direction of the ray.</param>
-      <param name="hitInfo">If true is returned, hitInfo will contain more information about where the collider was hit (See Also: RaycastHit).</param>
+      <param name="hitInfo">If true is returned, hitInfo will contain more information about where the collider was hit.</param>
       <param name="maxDistance">The max length of the ray.</param>
       <returns>
-        <para>True when the ray intersects any collider, otherwise false.</para>
+        <para>True when the ray intersects the collider, otherwise false.</para>
       </returns>
     </member>
     <member name="T:UnityEngine.Collision">
@@ -1356,8 +1356,8 @@ Note that there is a special case when the two overlapping colliders have physic
       <summary>
         <para>Makes the collision detection system ignore all collisions between collider1 and collider2.</para>
       </summary>
-      <param name="start">Start point.</param>
-      <param name="end">End point.</param>
+      <param name="start">Starting point of the collider.</param>
+      <param name="end">End point of the collider.</param>
       <param name="ignore">Ignore collision.</param>
       <param name="collider1"></param>
       <param name="collider2"></param>

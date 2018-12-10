@@ -31,7 +31,7 @@
     </member>
     <member name="P:UnityEngine.Animation.isPlaying">
       <summary>
-        <para>Are we playing any animations?</para>
+        <para>Is an animation currently being played?</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Animation.localBounds">
@@ -173,28 +173,28 @@
     </member>
     <member name="M:UnityEngine.Animation.Play()">
       <summary>
-        <para>Plays an animation without any blending.</para>
+        <para>Plays an animation without blending.</para>
       </summary>
       <param name="mode"></param>
       <param name="animation"></param>
     </member>
     <member name="M:UnityEngine.Animation.Play(System.String)">
       <summary>
-        <para>Plays an animation without any blending.</para>
+        <para>Plays an animation without blending.</para>
       </summary>
       <param name="mode"></param>
       <param name="animation"></param>
     </member>
     <member name="M:UnityEngine.Animation.Play(UnityEngine.PlayMode)">
       <summary>
-        <para>Plays an animation without any blending.</para>
+        <para>Plays an animation without blending.</para>
       </summary>
       <param name="mode"></param>
       <param name="animation"></param>
     </member>
     <member name="M:UnityEngine.Animation.Play(System.String,UnityEngine.PlayMode)">
       <summary>
-        <para>Plays an animation without any blending.</para>
+        <para>Plays an animation without blending.</para>
       </summary>
       <param name="mode"></param>
       <param name="animation"></param>
@@ -1485,7 +1485,7 @@
     </member>
     <member name="P:UnityEngine.Animator.feetPivotActive">
       <summary>
-        <para>Blends pivot point between body center of mass and feet pivot. At 0%, the blending point is body center of mass. At 100%, the blending point is feet pivot.</para>
+        <para>Blends pivot point between body center of mass and feet pivot.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Animator.fireEvents">
@@ -2021,7 +2021,7 @@
     </member>
     <member name="M:UnityEngine.Animator.MatchTarget(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.AvatarTarget,UnityEngine.MatchTargetWeightMask,System.Single,System.Single)">
       <summary>
-        <para>Automatically adjust the gameobject position and rotation so that the AvatarTarget reaches the matchPosition when the current state is at the specified progress.</para>
+        <para>Automatically adjust the GameObject position and rotation.</para>
       </summary>
       <param name="matchPosition">The position we want the body part to reach.</param>
       <param name="matchRotation">The rotation in which we want the body part to be.</param>
@@ -4888,7 +4888,7 @@
     </member>
     <member name="T:UnityEngine.SkeletonBone">
       <summary>
-        <para>Details of the Transform name mapped to a model's skeleton bone and its default position and rotation in the T-pose.</para>
+        <para>Details of the Transform name mapped to the skeleton bone of a model and its default position and rotation in the T-pose.</para>
       </summary>
     </member>
     <member name="F:UnityEngine.SkeletonBone.name">

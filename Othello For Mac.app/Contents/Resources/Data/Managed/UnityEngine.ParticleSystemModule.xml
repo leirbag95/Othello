@@ -1753,6 +1753,11 @@ The Noise Module allows you to apply turbulence to the movement of your particle
         <para>The animated velocity of the particle.</para>
       </summary>
     </member>
+    <member name="P:UnityEngine.ParticleSystem.Particle.axisOfRotation">
+      <summary>
+        <para>Mesh particles will rotate around this axis.</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.ParticleSystem.Particle.lifetime">
       <summary>
         <para>The lifetime of the particle.</para>

@@ -12,7 +12,7 @@
 	<key>CFBundleExecutable</key>
 	<string>Othello For Mac</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Unity Player version 2018.2.1f1 (1a9968d9f99c). (c) 2018 Unity Technologies ApS. All rights reserved.</string>
+	<string>Unity Player version 2018.2.18f1 (4550892b6062). (c) 2018 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>
 	<string>PlayerIcon.icns</string>
 	<key>CFBundleIdentifier</key>
@@ -38,7 +38,7 @@
 	<key>NSPrincipalClass</key>
 	<string>PlayerApplication</string>
 	<key>UnityBuildNumber</key>
-	<string>1a9968d9f99c</string>
+	<string>4550892b6062</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9.0</string>
 </dict>
