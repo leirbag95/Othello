@@ -51,6 +51,24 @@ git clone https://github.com/leirbag95/Othello.git
 
 - PvAI: Easy
 
+#### Algorithme
+
+At each round, append position of all possibilities in a list ``` L ```
+For example at the first round, ```L ``` will be
+```
+L = [26, 42, 44]
+```
+Then we take a random element in this list.
+
 - PvAI: Medium
+
+#### Algorithme
+
+At each round, append position of all possibilities in a list ``` L ```
+For example at the first round, ```L ``` will be
+```
+L = [26, 42, 44]
+```
+Then We take the element that will win the most pawn at the next round
 
 - PvAI: Hard
