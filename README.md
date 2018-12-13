@@ -51,6 +51,8 @@ git clone https://github.com/leirbag95/Othello.git
 
 - PvAI: Easy
 
+![2ov2u7](https://user-images.githubusercontent.com/17054452/49927668-c0ff5380-febe-11e8-92bb-e541c5e210e4.gif)
+
 #### Algorithme
 
 At each round, append position of all possibilities in a list ``` L ```
@@ -61,6 +63,7 @@ L = [26, 42, 44]
 Then we take a random element in this list.
 
 - PvAI: Medium
+
 
 #### Algorithme
 
