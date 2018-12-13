@@ -53,7 +53,7 @@ git clone https://github.com/leirbag95/Othello.git
 
 ![2ov2u7](https://user-images.githubusercontent.com/17054452/49927668-c0ff5380-febe-11e8-92bb-e541c5e210e4.gif)
 
-#### Algorithme
+#### Algorithm
 
 At each round, append position of all possibilities in a list ``` L ```
 For example at the first round, ```L ``` will be
@@ -67,7 +67,7 @@ Then we take a random element in this list.
 ![2ov2yb](https://user-images.githubusercontent.com/17054452/49927785-0faced80-febf-11e8-8d40-7bfd2560aba4.gif)
 
 
-#### Algorithme
+#### Algorithm
 
 At each round, append position of all possibilities in a list ``` L ```
 For example at the first round, ```L ``` will be
