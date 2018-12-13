@@ -35,7 +35,7 @@ If you want to custom the project you need to download the entire project.
 
 
 Enter this command in your terminal
-```
+```sh
 git clone https://github.com/leirbag95/Othello.git
 
 ```
