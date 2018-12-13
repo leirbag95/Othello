@@ -63,6 +63,7 @@ L = [26, 42, 44]
 Then we take a random element in this list.
 
 - PvAI: Medium
+![2ov2yb](https://user-images.githubusercontent.com/17054452/49927785-0faced80-febf-11e8-8d40-7bfd2560aba4.gif)
 
 
 #### Algorithme
